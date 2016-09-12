@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Text.RegularExpressions;
 using SmartFormat.Core.Extensions;
 using SmartFormat.Core.Parsing;
@@ -13,7 +14,7 @@ namespace SmartFormat.Extensions
 		private static readonly Regex complexConditionPattern
 			= new Regex(@"^  (?:   ([&/]?)   ([<>=!]=?)   ([0-9.-]+)   )+   \?",
 			//   Description:	  and/or	comparator	 value
-			RegexOptions.IgnorePatternWhitespace | RegexOptions.Compiled);
+			RegexOptions.IgnorePatternWhitespace);
 
 		public bool TryEvaluateFormat(IFormattingInfo formattingInfo)
 		{
@@ -36,7 +37,7 @@ namespace SmartFormat.Extensions
 				current is byte || current is short || current is int || current is long
 				|| current is float || current is double || current is decimal;
 			// An Enum is a number too:
-			if (currentIsNumber == false && current != null && current.GetType().IsEnum)
+			if (currentIsNumber == false && current != null && current.GetType().GetTypeInfo().IsEnum)
 			{
 				currentIsNumber = true;
 			}

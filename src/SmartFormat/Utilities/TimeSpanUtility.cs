@@ -116,7 +116,7 @@ namespace SmartFormat.Utilities
 						break;
 					default:
 						// This code is unreachable, but it prevents compile-errors.
-						throw new InvalidEnumArgumentException();
+						throw new ArgumentException();
 				}
 
 
@@ -349,7 +349,7 @@ namespace SmartFormat.Utilities
 			}
 		}
 
-		private static readonly Regex parser = new Regex(@"\b(w|week|weeks|d|day|days|h|hour|hours|m|minute|minutes|s|second|seconds|ms|millisecond|milliseconds|auto|short|fill|full|abbr|noabbr|less|noless)\b", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+		private static readonly Regex parser = new Regex(@"\b(w|week|weeks|d|day|days|h|hour|hours|m|minute|minutes|s|second|seconds|ms|millisecond|milliseconds|auto|short|fill|full|abbr|noabbr|less|noless)\b", RegexOptions.IgnoreCase);
 		public static TimeSpanFormatOptions Parse(string formatOptionsString)
 		{
 			formatOptionsString = formatOptionsString.ToLower();
