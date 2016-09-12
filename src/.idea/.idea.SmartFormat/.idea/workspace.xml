@@ -1,48 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97a7833a-bfb6-4aff-8d1a-ec1de45af67b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat VS2008.sln" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat VS2010.sln" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat VS2012.sln" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/Program.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/Properties/Resources.Designer.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/Properties/Resources.resx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/Properties/Settings.Designer.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/Properties/Settings.settings" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/Sample Extensions/RTFOutput.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/SmartFormat.Demo.csproj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/SmartFormatDemo.Designer.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/SmartFormatDemo.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/SmartFormatDemo.resx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/ThirdParty/RTFLib/IRTFCell.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/ThirdParty/RTFLib/IRTFRow.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/ThirdParty/RTFLib/IRtfProcessor.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/ThirdParty/RTFLib/RTFAlignment.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/ThirdParty/RTFLib/RTFBorderSide.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/ThirdParty/RTFLib/RTFBuilder.RTFFonts.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/ThirdParty/RTFLib/RTFBuilder.RTFFormatWrap.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/ThirdParty/RTFLib/RTFBuilder.RTFParaWrap.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/ThirdParty/RTFLib/RTFBuilder.UnWrapped.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/ThirdParty/RTFLib/RTFBuilder.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/ThirdParty/RTFLib/RTFBuilderbase.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/ThirdParty/RTFLib/RTFCell.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/ThirdParty/RTFLib/RTFCellDefinition.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/ThirdParty/RTFLib/RTFCellDefinitionBuilder.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/ThirdParty/RTFLib/RTFFont.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/ThirdParty/RTFLib/RTFImage.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/ThirdParty/RTFLib/RTFRow.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/ThirdParty/RTFLib/RTFRowDefinition.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/ThirdParty/RTFLib/RTFUtil.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/ThirdParty/RTFLib/Readme.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Demo/app.config" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Tests/SmartFormat.Tests.csproj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat.Tests/packages.config" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat/SmartFormat.csproj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../SmartFormat/SmartFormat.nuspec" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../packages/repositories.config" afterPath="" />
-    </list>
+    <list default="true" id="97a7833a-bfb6-4aff-8d1a-ec1de45af67b" name="Default" comment="" />
     <ignored path="SmartFormat.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -178,12 +137,12 @@
       <updated>1473709544760</updated>
       <workItem from="1473709546011" duration="136000" />
       <workItem from="1473709700062" duration="643000" />
-      <workItem from="1473711293002" duration="553000" />
+      <workItem from="1473711293002" duration="914000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1332000" />
+    <option name="totallyTimeSpent" value="1693000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
