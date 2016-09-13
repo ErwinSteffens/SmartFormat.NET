@@ -1,5 +1,7 @@
 ﻿using System.Reflection;
 using SmartFormat.Core.Extensions;
+using SmartFormat.Utilities;
+using System.Linq;
 
 namespace SmartFormat.Extensions
 {
@@ -27,7 +29,8 @@ namespace SmartFormat.Extensions
 			// Let's see if the argSelector is a Selectors/Field/ParseFormat:
 			var sourceType = current.GetType();
 
-			var bindingFlags = BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public;
+#if NET35 || NET40
+            var bindingFlags = BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public;
 			bindingFlags |= selectorInfo.FormatDetails.Settings.GetCaseSensitivityBindingFlag();
 
 			var members = sourceType.GetMember(selector, bindingFlags);
@@ -82,8 +85,64 @@ namespace SmartFormat.Extensions
 
 				}
 			}
+#else
+            var typeInfo = sourceType.GetTypeInfo();
 
-			return false;
-		}
-	}
+            var caseSensitive = selectorInfo.FormatDetails.Settings.GetCaseSensitivityComparison();
+            var members = typeInfo.GetAllMembers().Where(m => m.Name.Equals(selector, caseSensitive));
+            foreach (var member in members)
+            {
+                var fieldInfo = member as FieldInfo;
+                if (fieldInfo != null)
+                {
+                    selectorInfo.Result = fieldInfo.GetValue(current);
+                    return true;
+                }
+
+                if (member is PropertyInfo || member is MethodInfo)
+                {
+                    MethodInfo methodInfo;
+
+                    var propertyInfo = member as PropertyInfo;
+                    if (propertyInfo != null)
+                    {
+                        //  Make sure the property is not WriteOnly:
+                        if (propertyInfo.CanRead)
+                        {
+                            methodInfo = propertyInfo.GetMethod;
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    }
+                    else
+                    {
+                        // Selector is a method
+                        methodInfo = (MethodInfo)member;
+                    }
+
+                    //  Check that this method is valid -- it needs to return a value and has to be parameterless:
+                    //  We are only looking for a parameterless Function/Property:
+                    if (methodInfo.GetParameters().Length > 0)
+                    {
+                        continue;
+                    }
+
+                    //  Make sure that this method is not void!  It has to be a Function!
+                    if (methodInfo.ReturnType == typeof(void))
+                    {
+                        continue;
+                    }
+
+                    //  Retrieve the Selectors/ParseFormat value:
+                    selectorInfo.Result = methodInfo.Invoke(current, new object[0]);
+                    return true;
+                }
+            }
+#endif
+
+            return false;
+        }
+    }
 }

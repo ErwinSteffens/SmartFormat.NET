@@ -6,9 +6,12 @@
   },
 
   "frameworks": {
-    "netstandard1.2": {
+    "netstandard1.1": {
     },
     "net40": {
+      "frameworkAssemblies": {
+        "System.Xml.Linq": {}
+      }
     }
   }
 }

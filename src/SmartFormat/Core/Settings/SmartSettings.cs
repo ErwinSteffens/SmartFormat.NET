@@ -42,5 +42,20 @@ namespace SmartFormat.Core.Settings
                 }
             }
         }
+
+#if NET40
+        internal BindingFlags GetCaseSensitivityBindingFlag()
+        {
+            switch (CaseSensitivity)
+            {
+                case CaseSensitivityType.CaseSensitive:
+                    return 0;
+                case CaseSensitivityType.CaseInsensitive:
+                    return BindingFlags.IgnoreCase;
+                default:
+                    throw new InvalidOperationException(string.Format("The case sensitivity type [{0}] is unknown.", CaseSensitivity));
+            }
+        }
+#endif
     }
 }

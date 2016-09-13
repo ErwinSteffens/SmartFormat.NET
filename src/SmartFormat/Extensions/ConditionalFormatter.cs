@@ -37,9 +37,16 @@ namespace SmartFormat.Extensions
 				current is byte || current is short || current is int || current is long
 				|| current is float || current is double || current is decimal;
 			// An Enum is a number too:
-			if (currentIsNumber == false && current != null && current.GetType().GetTypeInfo().IsEnum)
+			if (currentIsNumber == false && current != null)
 			{
-				currentIsNumber = true;
+#if NET40
+                if (current.GetType().IsEnum)
+#else
+                if (current.GetType().GetTypeInfo().IsEnum)
+#endif
+                {
+                    currentIsNumber = true;
+			    }
 			}
 			var currentNumber = currentIsNumber ? Convert.ToDecimal(current) : 0;
 
