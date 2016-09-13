@@ -121,7 +121,7 @@ namespace SmartFormat.Tests.Core
 			{
 				var options = formattingInfo.FormatterOptions;
 				var format = formattingInfo.Format;
-				var formatString = format != null ? format.Text : "";
+				var formatString = format != null ? format.RawText : "";
 				formattingInfo.Write("TestExtension1 Options: " + options + ", Format: " + formatString);
 				return true;
 			}

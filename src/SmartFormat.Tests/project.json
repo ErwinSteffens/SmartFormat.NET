@@ -5,7 +5,7 @@
     "NUnit": "3.4.1",
     "dotnet-test-nunit": "3.4.0-beta-2",
     "SmartFormat": "1.0.0-*",
-    "System.ComponentModel.TypeConverter": "4.1.0"
+    "System.Collections.NonGeneric": "4.0.1"
   },
 
     "testRunner": "nunit",

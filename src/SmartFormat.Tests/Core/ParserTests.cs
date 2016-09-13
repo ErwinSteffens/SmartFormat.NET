@@ -65,7 +65,7 @@ namespace SmartFormat.Tests.Core
 					// Make sure that EVERY item has an error:
 					Assert.Fail("Parsing \"{0}\" should have failed but did not.", format);
 				}
-				catch (ParsingErrors ex)
+				catch (ParsingErrors)
 				{
 				}
 			}

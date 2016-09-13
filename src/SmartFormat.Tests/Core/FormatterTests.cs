@@ -23,7 +23,7 @@ namespace SmartFormat.Tests.Core
 				formatter.Test("--{0}--", errorArgs, "--ERROR!--ERROR!--");
 				Assert.Fail("Formatter should have thrown an exception, but did not.");
 			}
-			catch (FormattingException ex)
+			catch (FormattingException)
 			{
 			}
 		}
