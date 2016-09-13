@@ -27,6 +27,7 @@ namespace SmartFormat.Tests.Utilities
 						 , Is.EqualTo("There are <a href='www.example.com/SomePage'>two</a> <a href='www.example.com/SomePage'>links</a> in this one."));
 
 		}
+
 		[Test]
 		public void FormatDelegate_Works_WithSmartFormat()
 		{

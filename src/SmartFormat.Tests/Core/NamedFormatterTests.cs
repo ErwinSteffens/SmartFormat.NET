@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using System.Globalization;
+using System.Threading;
+using NUnit.Framework;
 using SmartFormat.Core.Extensions;
 using SmartFormat.Core.Formatting;
 using SmartFormat.Extensions;
@@ -30,10 +32,10 @@ namespace SmartFormat.Tests.Core
 		[TestCase("{0:default:N2}", 5, "5.00")]
 		[TestCase("{0:d()}", 5, "5")]
 		[TestCase("{0:d:N2}", 5, "5.00")]
-
 		public void Invoke_extensions_by_name_or_shortname(string format, object arg0, string expectedResult)
 		{
-			var actualResult = Smart.Format(format, arg0);
+            var specificCulture = new CultureInfo("en-us");
+            var actualResult = Smart.Format(specificCulture, format, arg0);
 			Assert.AreEqual(expectedResult, actualResult);
 		}
 
@@ -73,7 +75,8 @@ namespace SmartFormat.Tests.Core
 		public void NamedFormatter_invokes_a_specific_formatter(string format, object arg0, string expectedResult)
 		{
 			var smart = GetCustomFormatter();
-			var actualResult = smart.Format(format, arg0);
+            var specificCulture = new CultureInfo("en-us");
+            var actualResult = smart.Format(specificCulture, format, arg0);
 			Assert.AreEqual(expectedResult, actualResult);
 		}
 

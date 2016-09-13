@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0-*",
+  "version": "1.0.0-*",
 
   "dependencies": {
     "NUnit": "3.4.1",
@@ -8,17 +8,17 @@
     "System.Collections.NonGeneric": "4.0.1"
   },
 
-    "testRunner": "nunit",
-    
-    "frameworks": {
-        "netcoreapp1.0": {
-            "imports": "portable-net45+win8",
-            "dependencies": {
-                "Microsoft.NETCore.App": {
-                    "version": "1.0.0-*",
-                    "type": "platform"
-                }
-            }
+  "testRunner": "nunit",
+
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": "portable-net45+win8",
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "version": "1.0.0-*",
+          "type": "platform"
         }
-    }
+      }
+    } 
+  }
 }

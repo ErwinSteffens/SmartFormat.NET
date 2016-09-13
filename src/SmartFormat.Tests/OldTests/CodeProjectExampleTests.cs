@@ -462,7 +462,7 @@ namespace SmartFormat.Tests.OldTests
 
 	}
 
-    public class Size
+    public struct Size
     {
         public Size(int width, int height)
         {

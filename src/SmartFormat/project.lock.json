@@ -2,11 +2,6 @@
   "locked": false,
   "version": 2,
   "targets": {
-    ".NETFramework,Version=v3.5": {
-      "NETStandard.Library/1.6.0": {
-        "type": "package"
-      }
-    },
     ".NETFramework,Version=v4.0": {
       "NETStandard.Library/1.6.0": {
         "type": "package"
@@ -2474,9 +2469,6 @@
   "projectFileDependencyGroups": {
     "": [
       "NETStandard.Library >= 1.6.0"
-    ],
-    ".NETFramework,Version=v3.5": [
-      "System.Xml.Linq"
     ],
     ".NETFramework,Version=v4.0": [
       "System.Xml.Linq"
