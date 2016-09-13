@@ -103,21 +103,29 @@ namespace SmartFormat.Tests.Extensions
 		[TestCase("{:template()}")]
 		[TestCase("{:template(AAAA):}")]
 		[TestCase("{:template():AAAA}")]
-		[ExpectedException(typeof(FormattingException))]
 		public void Templates_must_be_defined(string format)
 		{
-			smart.Format(format, 5);
-		}
+		    TestDelegate action = () =>
+		    {
+                smart.Format(format, 5);
+            };
+
+            Assert.Throws(typeof(FormattingException), action);
+        }
 
 		[Test]
 		[TestCase("{:template:first}")]
 		[TestCase("{:template:firstlast}")]
 		[TestCase("{:template:LaSt}")]
-		[ExpectedException(typeof(FormattingException))]
 		public void Templates_are_case_sensitive(string format)
 		{
-			smart.Format(format, 5);
-		}
+            TestDelegate action = () =>
+            {
+                smart.Format(format, 5);
+            };
+
+            Assert.Throws(typeof(FormattingException), action);
+        }
 
 		[Test]
 		[TestCase("{:template:first}", "SCOTT")]

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing.Text;
 using NUnit.Framework;
 
 namespace SmartFormat.Tests.Core

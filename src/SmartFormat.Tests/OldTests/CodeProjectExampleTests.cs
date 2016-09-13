@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Globalization;
 using NUnit.Framework;
 using SmartFormat.Core.Settings;
@@ -48,7 +47,7 @@ namespace SmartFormat.Tests.OldTests
 			var formatString = "{0} is {1} years old and has {2:N2} friends.";
 			var expectedOutput = "Quentin is 30 years old and has 4.00 friends.";
 
-			var specificCulture = CultureInfo.CreateSpecificCulture("en-us");
+            var specificCulture = new CultureInfo("en-us");
 			string actualOutput = Smart.Format(specificCulture, formatString, p.FirstName, p.Age, p.Friends.Count);
 			Assert.AreEqual(expectedOutput, actualOutput);
 		}
@@ -62,8 +61,8 @@ namespace SmartFormat.Tests.OldTests
 			var formatString = "{FirstName} is {Age} years old and has {Friends.Count:N2} friends.";
 			var expectedOutput = "Quentin is 30 years old and has 4.00 friends.";
 
-			var specificCulture = CultureInfo.CreateSpecificCulture("en-us");
-			string actualOutput = Smart.Format(specificCulture, formatString, p);
+            var specificCulture = new CultureInfo("en-us");
+            string actualOutput = Smart.Format(specificCulture, formatString, p);
 			Assert.AreEqual(expectedOutput, actualOutput);
 		}
 
@@ -93,8 +92,8 @@ namespace SmartFormat.Tests.OldTests
 			var formatString = "All dates: {0:{:M/d/yyyy}| and }.";
 			var expectedOutput = "All dates: 12/31/1999 and 10/10/2010 and 1/1/3000.";
 
-			var specificCulture = CultureInfo.CreateSpecificCulture("en-us");
-			string actualOutput = Smart.Format(specificCulture, formatString, data);
+            var specificCulture = new CultureInfo("en-us");
+            string actualOutput = Smart.Format(specificCulture, formatString, data);
 			Assert.AreEqual(expectedOutput, actualOutput);
 		}
 
@@ -413,8 +412,8 @@ namespace SmartFormat.Tests.OldTests
 			var formatString = "{0:{:M/d/yyyy}|, |, and }.";
 			var expectedOutput = "12/31/1999, 10/10/2010, and 1/1/3000.";
 
-			var specificCulture = CultureInfo.CreateSpecificCulture("en-us");
-			string actualOutput = Smart.Format(specificCulture, formatString, data);
+            var specificCulture = new CultureInfo("en-us");
+            string actualOutput = Smart.Format(specificCulture, formatString, data);
 			Assert.AreEqual(expectedOutput, actualOutput);
 		}
 
@@ -462,4 +461,16 @@ namespace SmartFormat.Tests.OldTests
 		}
 
 	}
+
+    public class Size
+    {
+        public Size(int width, int height)
+        {
+            this.Width = width;
+            this.Height = height;
+        }
+
+        public int Width { get; set; }
+        public int Height { get; set; }
+    }
 }
